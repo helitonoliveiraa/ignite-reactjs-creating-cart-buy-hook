@@ -11,8 +11,18 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    --primary: #a4916d;
+    --white: #fff;
+    --gray-light: #eee;
+    --gray-middle: #ddd;
+    --gray: #a6a6a6;
+    --gray-dark: #8c8c8c;
+    --dark: #333;
+  }
+
   body {
-    background: #191920 url(${background}) no-repeat center top;
+    background: #a4916d url(${background}) no-repeat center top;
     -webkit-font-smoothing: antialiased;
   }
 

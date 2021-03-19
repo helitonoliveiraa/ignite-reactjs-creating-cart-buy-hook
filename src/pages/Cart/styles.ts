@@ -3,7 +3,7 @@ import { darken, lighten } from 'polished';
 
 export const Container = styled.div`
   padding: 30px;
-  background: #fff;
+  background: var(--white);
   border-radius: 4px;
 
   footer {
@@ -13,9 +13,9 @@ export const Container = styled.div`
     align-items: center;
 
     button {
-      background: #7159c1;
-      color: #fff;
-      border: 0;
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
       border-radius: 4px;
       padding: 12px 20px;
       font-weight: bold;
@@ -23,7 +23,8 @@ export const Container = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.06, '#7159c1')};
+        background: ${darken(0.06, '#a4916d')};
+        color: var(--white);
       }
     }
   }
@@ -33,14 +34,14 @@ export const ProductTable = styled.table`
   width: 100%;
 
   thead th {
-    color: #999;
+    color: var(--gray);
     text-align: left;
     padding: 12px;
   }
 
   tbody td {
     padding: 12px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray-light);
   }
 
   img {
@@ -48,7 +49,7 @@ export const ProductTable = styled.table`
   }
 
   strong {
-    color: #333;
+    color: var(--gray-dark);
     display: block;
   }
 
@@ -57,6 +58,7 @@ export const ProductTable = styled.table`
     margin-top: 5px;
     font-size: 18px;
     font-weight: bold;
+    color: var(--primary);
   }
 
   div {
@@ -64,9 +66,9 @@ export const ProductTable = styled.table`
     align-items: center;
 
     input {
-      border: 1px solid #ddd;
+      border: 1px solid var(--gray-middle);
       border-radius: 4px;
-      color: #666;
+      color: var(--gray);
       padding: 6px;
       width: 50px;
     }
@@ -78,19 +80,19 @@ export const ProductTable = styled.table`
     padding: 6px;
 
     svg {
-      color: #7159c1;
+      color: var(--primary);
       transition: color 0.2s;
     }
 
     &:hover {
       svg {
-        color: ${darken(0.06, '#7159c1')};
+        color: ${darken(0.06, '#a4916d')};
       }
     }
 
     &:disabled {
       svg {
-        color: ${lighten(0.25, '#7159c1')};
+        color: ${lighten(0.25, '#a4916d')};
         cursor: not-allowed;
       }
     }
@@ -102,12 +104,13 @@ export const Total = styled.div`
   align-items: baseline;
 
   span {
-    color: #999;
+    color: var(--gray);
     font-weight: bold;
   }
 
   strong {
     font-size: 28px;
     margin-left: 5px;
+    color: var(--primary);
   }
 `;

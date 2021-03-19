@@ -10,7 +10,7 @@ export const ProductList = styled.ul`
   li {
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: var(--white);
     border-radius: 4px;
     padding: 20px;
 
@@ -22,7 +22,7 @@ export const ProductList = styled.ul`
     > strong {
       font-size: 16px;
       line-height: 20px;
-      color: #333;
+      color: var(--gray-dark);
       margin-top: 5px;
     }
 
@@ -30,12 +30,13 @@ export const ProductList = styled.ul`
       font-size: 21px;
       font-weight: bold;
       margin: 5px 0 20px;
+      color: var(--primary);
     }
 
     button {
-      background: #7159c1;
-      color: #fff;
-      border: 0;
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
       border-radius: 4px;
       overflow: hidden;
       margin-top: auto;
@@ -45,7 +46,12 @@ export const ProductList = styled.ul`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.06, '#7159c1')};
+        background: ${darken(0.06, '#a4916d')};
+        color: var(--white);
+
+        svg {
+          color: var(--white);
+        }
       }
 
       div {
@@ -56,6 +62,7 @@ export const ProductList = styled.ul`
 
         svg {
           margin-right: 5px;
+          color: var(--primary);
         }
       }
 
