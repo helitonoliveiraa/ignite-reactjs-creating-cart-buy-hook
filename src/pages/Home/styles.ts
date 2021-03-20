@@ -4,15 +4,23 @@ import { darken } from 'polished';
 export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 2rem;
   list-style: none;
+
+  @media (max-width: 1020px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   li {
     display: flex;
     flex-direction: column;
     background: var(--white);
-    border-radius: 4px;
-    padding: 20px;
+    border-radius: 0.4rem;
+    padding: 2rem;
 
     img {
       align-self: center;
@@ -20,16 +28,16 @@ export const ProductList = styled.ul`
     }
 
     > strong {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 1.6rem;
+      line-height: 2rem;
       color: var(--gray-dark);
-      margin-top: 5px;
+      margin-top: 0.5rem;
     }
 
     > span {
-      font-size: 21px;
+      font-size: 2rem;
       font-weight: bold;
-      margin: 5px 0 20px;
+      margin: 0.5rem 0 2rem;
       color: var(--primary);
     }
 
@@ -37,7 +45,7 @@ export const ProductList = styled.ul`
       background: transparent;
       color: var(--primary);
       border: 2px solid var(--primary);
-      border-radius: 4px;
+      border-radius: 0.4rem;
       overflow: hidden;
       margin-top: auto;
 
@@ -57,11 +65,11 @@ export const ProductList = styled.ul`
       div {
         display: flex;
         align-items: center;
-        padding: 12px;
+        padding: 1.2rem;
         background: rgba(0, 0, 0, 0.1);
 
         svg {
-          margin-right: 5px;
+          margin-right: 0.5rem;
           color: var(--primary);
         }
       }

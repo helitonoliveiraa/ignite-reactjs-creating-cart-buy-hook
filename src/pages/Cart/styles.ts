@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
 export const Container = styled.div`
-  padding: 30px;
+  padding: 3rem;
   background: var(--white);
-  border-radius: 4px;
+  border-radius: 0.4rem;
 
   footer {
-    margin-top: 30px;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,8 +16,8 @@ export const Container = styled.div`
       background: transparent;
       color: var(--primary);
       border: 2px solid var(--primary);
-      border-radius: 4px;
-      padding: 12px 20px;
+      border-radius: 0.4rem;
+      padding: 1.2rem 2rem;
       font-weight: bold;
       text-transform: uppercase;
       transition: background 0.2s;
@@ -36,11 +36,11 @@ export const ProductTable = styled.table`
   thead th {
     color: var(--gray);
     text-align: left;
-    padding: 12px;
+    padding: 1.2rem;
   }
 
   tbody td {
-    padding: 12px;
+    padding: 1.2rem;
     border-bottom: 1px solid var(--gray-light);
   }
 
@@ -55,8 +55,8 @@ export const ProductTable = styled.table`
 
   span {
     display: block;
-    margin-top: 5px;
-    font-size: 18px;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: var(--primary);
   }
@@ -67,17 +67,17 @@ export const ProductTable = styled.table`
 
     input {
       border: 1px solid var(--gray-middle);
-      border-radius: 4px;
+      border-radius: 0.4rem;
       color: var(--gray);
-      padding: 6px;
-      width: 50px;
+      padding: 0.6rem;
+      width: 5rem;
     }
   }
 
   button {
     background: none;
     border: 0;
-    padding: 6px;
+    padding: 0.6rem;
 
     svg {
       color: var(--primary);
@@ -109,8 +109,8 @@ export const Total = styled.div`
   }
 
   strong {
-    font-size: 28px;
-    margin-left: 5px;
+    font-size: 2.8rem;
+    margin-left: 0.5rem;
     color: var(--primary);
   }
 `;

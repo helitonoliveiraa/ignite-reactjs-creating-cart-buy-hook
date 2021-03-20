@@ -79,7 +79,7 @@ const Cart = (): JSX.Element => {
                     disabled={product.amount <= 1}
                     onClick={() => handleProductDecrement(product)}
                   >
-                    <MdRemoveCircleOutline size={20} />
+                    <MdRemoveCircleOutline size={'2rem'} />
                   </button>
                   <input
                     type="text"
@@ -92,7 +92,7 @@ const Cart = (): JSX.Element => {
                     data-testid="increment-product"
                     onClick={() => handleProductIncrement(product)}
                   >
-                    <MdAddCircleOutline size={20} />
+                    <MdAddCircleOutline size={'2rem'} />
                   </button>
                 </div>
               </td>
@@ -105,7 +105,7 @@ const Cart = (): JSX.Element => {
                   data-testid="remove-product"
                   onClick={() => handleRemoveProduct(product.id)}
                 >
-                  <MdDelete size={20} />
+                  <MdDelete size={'2rem'} />
                 </button>
               </td>
             </tr>

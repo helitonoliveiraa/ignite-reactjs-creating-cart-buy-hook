@@ -1,13 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+type CartProps = {
+  active: boolean;
+}
 
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 0;
+  margin: 5rem 0;
 
   a {
+    img {
+      max-width: 23rem;
+    }
+
     transition: opacity 0.2s;
 
     &:hover {
@@ -16,23 +24,39 @@ export const Container = styled.header`
   }
 `;
 
-export const Cart = styled(Link)`
+export const Cart = styled(Link)<CartProps>`
   display: flex;
   align-items: center;
   text-decoration: none;
+  position: relative;
+
+  ${({active}) => active && css`
+    &::after {
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      border: 1px solid var(--dark);
+      background: var(--indicator);
+
+      position: absolute;
+      top: 0.2rem;
+      right: 0.2rem;
+    }
+  `}
 
   div {
     text-align: right;
-    margin-right: 10px;
+    margin-right: 1rem;
 
     strong {
       display: block;
-      color: #fff;
+      color: var(--white);
     }
 
     span {
-      font-size: 12px;
-      color: #999;
+      font-size: 1.2rem;
+      color: var(--gray);
     }
   }
 `;

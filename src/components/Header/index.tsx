@@ -16,7 +16,7 @@ const Header = (): JSX.Element => {
         <img src={logo} alt="Rocketshoes" />
       </Link>
 
-      <Cart to="/cart">
+      <Cart to="/cart" active={cartSize > 0}>
         <div>
           <strong>Meu carrinho</strong>
           <span data-testid="cart-size">
