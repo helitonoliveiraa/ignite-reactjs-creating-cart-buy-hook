@@ -5,6 +5,7 @@ import { ProductList } from './styles';
 import { api } from '../../services/api';
 import { formatPrice } from '../../util/format';
 import { useCart } from '../../hooks/useCart';
+import { Loading } from '../../components/Loader';
 
 interface Product {
   id: number;
@@ -52,27 +53,31 @@ const Home = (): JSX.Element => {
   }
 
   return (
-    <ProductList>
-      {products.map(product => (
-        <li key={product.id}>
-          <img src={product.image} alt={product.title} />
-          <strong>{product.title}</strong>
-          <span>{product.priceFormatted}</span>
-          <button
-            type="button"
-            data-testid="add-product-button"
-            onClick={() => handleAddProduct(product.id)}
-          >
-            <div data-testid="cart-product-quantity">
-              <MdAddShoppingCart size={'1.6rem'} />
-              {cartItemsAmount[product.id] || 0} 
-            </div>
-  
-            <span>ADICIONAR AO CARRINHO</span>
-          </button>
-        </li>
-      ))}
-    </ProductList>
+    <main>
+      {products.length === 0 && <Loading />}
+      <ProductList>
+
+        {products.map(product => (
+          <li key={product.id}>
+            <img src={product.image} alt={product.title} />
+            <strong>{product.title}</strong>
+            <span>{product.priceFormatted}</span>
+            <button
+              type="button"
+              data-testid="add-product-button"
+              onClick={() => handleAddProduct(product.id)}
+            >
+              <div data-testid="cart-product-quantity">
+                <MdAddShoppingCart size={'1.6rem'} />
+                {cartItemsAmount[product.id] || 0} 
+              </div>
+    
+              <span>ADICIONAR AO CARRINHO</span>
+            </button>
+          </li>
+        ))}
+      </ProductList>
+    </main>
   );
 };
 

@@ -54,6 +54,7 @@ export default createGlobalStyle`
   body {
     background: #a4916d url(${background}) no-repeat center top;
     -webkit-font-smoothing: antialiased;
+   
   }
 
   body, input, button {
@@ -64,6 +65,7 @@ export default createGlobalStyle`
     max-width: 1020px;
     margin: 0 auto;
     padding: 0 2rem 5rem;
+    height: 100vh;
   }
 
   button {
