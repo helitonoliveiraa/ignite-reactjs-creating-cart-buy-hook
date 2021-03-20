@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 type CartProps = {
-  active: boolean;
+  active: 'true' | 'false';
 }
 
 export const Container = styled.header`
@@ -30,7 +30,7 @@ export const Cart = styled(Link)<CartProps>`
   text-decoration: none;
   position: relative;
 
-  ${({active}) => active && css`
+  ${({active}) => active === 'true' && css`
     &::after {
       content: '';
       width: 1.2rem;
